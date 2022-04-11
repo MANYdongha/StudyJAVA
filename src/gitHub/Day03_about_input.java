@@ -2,7 +2,7 @@ package gitHub;
 
 import java.util.Scanner;
 
-public class Day02_about_input {
+public class Day03_about_input {
 	public static void main(String[] args) {
 		//Scanner 함수를 이용하여 입력받기
 		Scanner sc = new Scanner(System.in);
