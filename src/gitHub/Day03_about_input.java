@@ -24,5 +24,7 @@ public class Day03_about_input {
 		//문자열을 int로 가져올경우
 		age = Integer.parseInt(str); 
 		System.out.println("age 자료형은  int ? : " + ((age==30) ? true : false ));
+		
+		sc.close();
 	}
 }
