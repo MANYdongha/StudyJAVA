@@ -39,7 +39,8 @@ public class Day03_about_type {
 		System.out.printf("이름 : %s, 나이: %d, 전화번호: %s, 성별: %s ", person.name, person.age, person.phonbook, person.gender);
 		
 		System.out.println();
-		//컬렉션 : 배열과 비슷하지만 안에 포함하고 있는데이터들을 객체로 취급하여 가지고 있다(쉽게 배열안에 배열을 가지고 있다)
+		
+		//컬렉션 : 배열과 비슷하지만 안에 존재하는  데이터들을 객체로 취급하여 가지고 있다(쉽게 배열안에 배열을 가지고 있다)
 			Student p1 = new Student();
 			Student p2 = new Student();
 			Student p3 = new Student();
