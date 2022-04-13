@@ -3,7 +3,7 @@ package gitHub;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Cay04_about_Control_Quiz3 {
+public class Day04_about_Control_Quiz3 {
 	public static void main(String[] args) {
 		
 

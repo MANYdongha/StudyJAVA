@@ -3,7 +3,7 @@ package gitHub;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Cay04_about_Control_Quiz5 {
+public class Day04_about_Control_Quiz5 {
 	public static void main(String[] args) {
 	      //정수의 합계구하기
 	      //사용자에게 정수를 입력받아서 합계에 더하세요

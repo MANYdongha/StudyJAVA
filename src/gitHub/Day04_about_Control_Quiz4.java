@@ -1,6 +1,6 @@
 package gitHub;
 
-public class Cay04_about_Control_Quiz4 {
+public class Day04_about_Control_Quiz4 {
 	public static void main(String[] args) {
 	      //1) 본인의 이름을 문자열 변수에 저장하고 3회출력하세요.
 	   

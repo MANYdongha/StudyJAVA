@@ -2,7 +2,7 @@ package gitHub;
 
 import java.util.Scanner;
 
-public class Cay04_about_Control_Quiz1 {
+public class Day04_about_Control_Quiz1 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
       int num, num1,num3, num4, num5, num6;

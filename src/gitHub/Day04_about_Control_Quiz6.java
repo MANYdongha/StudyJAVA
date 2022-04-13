@@ -3,7 +3,7 @@ package gitHub;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Cay04_about_Control_Quiz6 {
+public class Day04_about_Control_Quiz6 {
 	  public static void main(String[] args) {
 	      //상대는 이미 답을 정해놨습니다.
 	      //여러분이 입력해서 답을 맞춰보세요
