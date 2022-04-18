@@ -47,7 +47,10 @@ public class Day05_about_SwitchAndWhile {
 	      case 0:
 	         System.out.println("프로그램을 종료합니다.");
 	         sc.close();
-	         return;   
+	         return;
+	      default :
+	    	  System.out.println("잘못된입력입니다.");
+	    	  continue;
 	      }
 	      System.out.println();
 	      }
