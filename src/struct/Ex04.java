@@ -24,7 +24,7 @@ Stack2 top =null;
 	public void printStack(Stack2 top) {
 		if(top !=null) {
 			System.out.println("data =  " + top.data);
-			if(top.link != null) printStack(top.link);
+			if(top.link !=  null) printStack(top.link);
 		}
 		
 	}
