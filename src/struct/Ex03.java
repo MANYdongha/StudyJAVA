@@ -5,6 +5,7 @@ int data;
 Stack link;
 
 }
+
 public class Ex03 {
 	static Stack top = null;
 	
@@ -16,6 +17,7 @@ public class Ex03 {
 		
 		return top;
 	}
+	
 	static void showList(Stack top) {	//지금들어가있는 Stack의 데이터를 보여주는 작업
 		while(true) {
 			if(top.link == null) {
