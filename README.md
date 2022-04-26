@@ -18,7 +18,8 @@
 14. class_quiz
 15. class_quiz2
 16. arr
-17.class
+17. class
+18. summary & recursive function
 
 
 #### java공부 내용프로젝트 입니다.
