@@ -2,6 +2,7 @@
 
 ### 주요공부내용
 
+0. 알고리즘 문제풀기(Programmers, BackJoon, The others..)
 1. github/about_java
 2. github/variable
 3. github/input
