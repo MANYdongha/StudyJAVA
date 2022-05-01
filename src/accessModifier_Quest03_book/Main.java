@@ -28,22 +28,20 @@ public class Main {
             hd.input(hd.inputPlace());
             break;
          case 3:
-            
-            
+        	hd.findBook();
             break;
          case 4:
-            
+            hd.deleteList();
             break;
          case 0:
             System.out.println("시스탬을 종료합니다.");
             break;
-         
-            
+ 
          default:
-            System.out.println("잘못된입력입니다.");
+            System.err.println("잘못된입력입니다.");
          }
       } while (menu!=0);
       
-   
+   sc.close();
    }
 }
