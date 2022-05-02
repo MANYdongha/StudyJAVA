@@ -158,7 +158,7 @@ public class Handler {
    }//end of findData2
    
 
-public void delet() {
+public void delet() {	//삭제하기 메뉴
 	 do {
 	 System.out.println("1.이름으로 삭제");
 	 System.out.println("2.나이로 삭제");
@@ -180,17 +180,17 @@ public void delet() {
 	 }
 	 	} while (menu != 0);
 	
-	 }
+	 }//end of delet
 
    
-	public void deletData(String name) {
-		Member[] ob = new Member[arr.length];
+	public void deletData(String name) { // 이름으로 데이터 삭제시작하는 곳 (오버로딩)
+		Member[] ob = new Member[arr.length];	//배열을 만들어 삭제에 해당하는 자료들 호출
 		int cnt = 0;
 		for(int i=0; i<arr.length;i++ ) {
 			if(arr[i] != null) {
 				if(name.equals(arr[i].getName())) {
 					ob[cnt] = arr[i]; 
-					cnt++;
+					cnt++;				
 					System.out.println("-------------------------------");
 					System.out.println(cnt+"번");
 		            System.out.println("이름 : " + arr[i].getName());
@@ -207,19 +207,19 @@ public void delet() {
 			}
 			
 		}
-		System.out.print("몇번을 삭제하겠습니까?  ");
+		System.out.print("몇번을 삭제하겠습니까?  ");	// 목록중에 몇번 살제할지 입력받기
 		int num = sc.nextInt();
 		cnt = num;
 		if(num == cnt) {
 			System.out.print("정말 삭제하시겠습니까? yes : 1 / no : 2  ");
-			num = sc.nextInt();
+			num = sc.nextInt();			//삭제는 매우 중요하므로 한번 더 확인하기
 			if(num ==1) {
 				for(int j =0; j<arr.length; j++) {
 					if(arr[j] != null) {
-						if(ob[cnt-1] != null) {
+						if(ob[cnt-1] != null) {	
 							if(ob[cnt-1].getName() == arr[j].getName() && ob[cnt-1].getAge() == arr[j].getAge()) {
-								arr[j] = null;
-								break;
+								arr[j] = null;//만든 목록에서 삭지할 데이터와 List에 있는 자료 찾기
+								break;		  //삭제 실행
 								
 							}
 						}
@@ -242,14 +242,14 @@ public void delet() {
 		
 	}
 	
-	public void deletData(int age) {
-		Member[] ob = new Member[arr.length];
+	public void deletData(int age) {// 이름으로 데이터 삭제시작하는 곳 (오버로딩)
+		Member[] ob = new Member[arr.length];	//배열을 만들어서 삭제할 내용만 모아둔다
 		int cnt = 0;
 		for(int i=0; i<arr.length;i++ ) {
 			if(arr[i] != null) {
 				if(age == arr[i].getAge()) {
 					ob[cnt] = arr[i]; 
-					cnt++;
+					cnt++;				//삭제 대상 한번 보여주기
 					System.out.println("-------------------------------");
 					System.out.println(cnt+"번");
 					System.out.println("이름 : " + arr[i].getName());
@@ -268,16 +268,16 @@ public void delet() {
 			
 		}
 		System.out.println("몇번을 삭제하겠습니까?");
-		int num = sc.nextInt();
+		int num = sc.nextInt();			// 배열에서 삭제할 번호 입력받기
 		if(num == cnt) {
 			System.out.println("정말 삭제하시겠습니까? yes : 1 / no : 2");
-			num = sc.nextInt();
+			num = sc.nextInt();			//삭제는 중요하니깐 한번 더 물어보기
 			cnt = num;
 			if(num ==1) {
 				for(int j =0; j<arr.length; j++) {
-					if(arr[j] != null) {
+					if(arr[j] != null) {		//배열에서 삭제할 데이터와 List에 있는 데이터 비교
 						if(ob[cnt].getName() == arr[j].getName() && ob[cnt].getAge() == arr[j].getAge()) {
-							arr[j] = null;
+							arr[j] = null;		//삭제
 						}
 					else if(arr[j] == null) {
 						continue;	
