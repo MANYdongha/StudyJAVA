@@ -230,7 +230,7 @@ public class Handler {
 		String findName = sc.next();
 		
 		for(int i=0; i<ob1.length; i++) {
-			if(ob1[i] != null) {
+			if(ob1[i] != null) {	//수정할 부분 ex) 김수정이라고 있을때 김만 쳐도 모든 항목들이 다 나오렉 설계
 				if(ob1[i].getName().equals(findName)) {
 						find = true;
 						for(int j =0; j<result.length; j++) {
