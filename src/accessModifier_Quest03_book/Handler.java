@@ -94,11 +94,11 @@ public class Handler {
    
     public Book inputPlace() {
        System.out.print("책제목입력 >>");
-       String name = sc.next();
+       String name = sc.nextLine();
        System.out.print("출판사입력 >>");
-       String major = sc.next();
+       String major = sc.nextLine();
        System.out.print("책지은이입력 >>");
-       String maker = sc.next();
+       String maker = sc.nextLine();
        Book tmp = new Book(name, major, maker);
        return tmp;
     }
@@ -143,7 +143,7 @@ public class Handler {
 		Book[] result = new Book[ob1.length];
 		Boolean find = false;
 		System.out.print("찾을 지은이로 입력 >> ");
-		String findMaker = sc.next();
+		String findMaker = sc.nextLine();
 		
 		for(int i=0; i<ob1.length; i++) {
 			if(ob1[i] != null) {
@@ -159,6 +159,59 @@ public class Handler {
 								}
 						}	
 				}
+				else if(findMaker.length() == 1) {
+					  if(ob1[i] == null) {
+		                  break;
+		               }
+					  if(ob1[i].getMaker() == null) {
+						  break;
+					  }
+					  find = true;
+					  char ch = findMaker.charAt(0);
+					  for(int j=0; j<ob1[i].getMaker().length(); j++) {
+		                  if(ob1[i].getMaker().charAt(j) == ch) {
+		                     System.out.println("-------------------------------");
+		                     System.out.println("이름 : " + ob1[i].getName());
+		                     System.out.println("츨핀사: " + ob1[i].getMajor());
+		                     System.out.println("지은이 : " + ob1[i].getMaker());
+		                     System.out.println("-------------------------------");
+		                     System.out.println();
+		                     
+		                     //System.out.println(ob1[i].getMaker().charAt(j));
+		                     
+		                     
+		                  }
+		               }
+					
+				}
+				   else if(findMaker.length() == 2 ){
+		            	//2글자는 해당글자가 포함하면 모드 출력함
+		            	if(ob1[i] == null) {
+		            		break;
+		            	}
+		            	if(ob1[i].getMaker() == null) {
+		            		break;
+		            	}
+		            	String chname = findMaker.substring(0,2);
+		            	find = true;
+		            	for(int j=0; j<ob1[i].getMaker().length(); j++) {
+		            		if(ob1[i].getMaker().contains(chname)) {
+		            			System.out.println("-------------------------------");
+			                     System.out.println("이름 : " + ob1[i].getName());
+			                     System.out.println("츨핀사: " + ob1[i].getMajor());
+			                     System.out.println("지은이 : " + ob1[i].getMaker());
+			                     System.out.println("-------------------------------");
+			                     System.out.println();
+		            			break;
+		            			
+		            			//System.out.println(arr[i].getName().charAt(j));
+		            			
+		            			
+		            		}
+		            	}
+		            }
+		            
+				
 				else {
 					continue;
 				}
@@ -200,11 +253,65 @@ public class Handler {
 								}
 						}	
 				}
+				
+			else if(findMajor.length() == 1) {
+				  if(ob1[i] == null) {
+	                  break;
+	               }
+				  if(ob1[i].getMajor() == null) {
+					  break;
+				  }
+				  find = true;
+				  char ch = findMajor.charAt(0);
+				  for(int j=0; j<ob1[i].getMajor().length(); j++) {
+	                  if(ob1[i].getMajor().charAt(j) == ch) {
+	                     System.out.println("-------------------------------");
+	                     System.out.println("이름 : " + ob1[i].getName());
+	                     System.out.println("츨핀사: " + ob1[i].getMajor());
+	                     System.out.println("지은이 : " + ob1[i].getMaker());
+	                     System.out.println("-------------------------------");
+	                     System.out.println();
+	                     
+	                     //System.out.println(ob1[i].getMaker().charAt(j));
+	                     
+	                     
+	                  }
+	               }
+				
+			}
+			   else if(findMajor.length() == 2 ){
+	            	//2글자는 해당글자가 포함하면 모드 출력함
+	            	if(ob1[i] == null) {
+	            		break;
+	            	}
+	            	if(ob1[i].getMajor() == null) {
+	            		break;
+	            	}
+	            	String chname = findMajor.substring(0,2);
+	            	find = true;
+	            	for(int j=0; j<ob1[i].getMajor().length(); j++) {
+	            		if(ob1[i].getMajor().contains(chname)) {
+	            			System.out.println("-------------------------------");
+		                     System.out.println("이름 : " + ob1[i].getName());
+		                     System.out.println("츨핀사: " + ob1[i].getMajor());
+		                     System.out.println("지은이 : " + ob1[i].getMaker());
+		                     System.out.println("-------------------------------");
+		                     System.out.println();
+	            			break;
+	            			
+	            			//System.out.println(arr[i].getName().charAt(j));
+	            			
+	            			
+	            		}
+	            	}
+	            }
+				
 				else {
 					continue;
 				}
 
 			}
+			
 			
 			else {
 				continue;
@@ -226,7 +333,7 @@ public class Handler {
 	private void howFindName() {	//책이름으로 검색
 		Book[] result = new Book[ob1.length];
 		Boolean find = false;
-		System.out.print("찾을 지은이로 입력 >> ");
+		System.out.print("찾을 책제목으로 입력 >> ");
 		String findName = sc.next();
 		
 		for(int i=0; i<ob1.length; i++) {
@@ -243,6 +350,57 @@ public class Handler {
 								}
 						}	
 				}
+				else if(findName.length() == 1) {
+					  if(ob1[i] == null) {
+		                  break;
+		               }
+					  if(ob1[i].getName() == null) {
+						  break;
+					  }
+					  find = true;
+					  char ch = findName.charAt(0);
+					  for(int j=0; j<ob1[i].getName().length(); j++) {
+		                  if(ob1[i].getName().charAt(j) == ch) {
+		                     System.out.println("-------------------------------");
+		                     System.out.println("이름 : " + ob1[i].getName());
+		                     System.out.println("츨핀사: " + ob1[i].getMajor());
+		                     System.out.println("지은이 : " + ob1[i].getMaker());
+		                     System.out.println("-------------------------------");
+		                     System.out.println();
+		                     
+		                     //System.out.println(ob1[i].getMaker().charAt(j));
+		                     
+		                     
+		                  }
+		               }
+					
+				}
+				   else if(findName.length() == 2 ){
+		            	//2글자는 해당글자가 포함하면 모드 출력함
+		            	if(ob1[i] == null) {
+		            		break;
+		            	}
+		            	if(ob1[i].getName() == null) {
+		            		break;
+		            	}
+		            	String chname = findName.substring(0,2);
+		            	find = true;
+		            	for(int j=0; j<ob1[i].getName().length(); j++) {
+		            		if(ob1[i].getName().contains(chname)) {
+		            			System.out.println("-------------------------------");
+			                     System.out.println("이름 : " + ob1[i].getName());
+			                     System.out.println("츨핀사: " + ob1[i].getMajor());
+			                     System.out.println("지은이 : " + ob1[i].getMaker());
+			                     System.out.println("-------------------------------");
+			                     System.out.println();
+		            			break;
+		            			
+		            			//System.out.println(arr[i].getName().charAt(j));
+		            			
+		            			
+		            		}
+		            	}
+		            }
 				else {
 					continue;
 				}
