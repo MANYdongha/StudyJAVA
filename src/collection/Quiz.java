@@ -1,11 +1,11 @@
 package collection;
 
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+
+import javax.swing.border.Border;
 
 class Board implements Comparable<Board>{
 	String title;				//제목
@@ -29,9 +29,10 @@ class Board implements Comparable<Board>{
 	
 	@Override
 	public int compareTo(Board o) {
-		System.out.println(o.starScore);
-		return o.starScore > o.starScore ? 1 : -1;
+		return this.starScore < o.starScore ? 1 : -1;
 	}
+	
+	
 }
 
 
@@ -48,18 +49,11 @@ public class Quiz {
 	
 
 	
-	static int compareByView(Board o1, Board o2) {
-		return o1.viewCount - o2.viewCount;				
-	}
-	
-	static int compareByTitle(Board o1, Board o2) {
-		return o1.title.compareTo(o2.title);	
-	}
-	static double compareByStar(Board o1, Board o2) {
-		return o1.starScore - o2.starScore;		
-	}
+
 	
 	public static void main(String[] args) {
+		
+		
 		Scanner sc = new Scanner(System.in);
 		Board[] arr =  {
 			new Board("암살", 5, 2.2),
@@ -104,24 +98,16 @@ public class Quiz {
 					menu = sc.nextInt();
 					switch (menu) {
 					case 1:
-						for(int i=0; i<list.size();i++) {
-							for(int j=i; j<list.size(); j++) {
-								if((compareByTitle(list.get(i), list.get(j)))>0){
-									Board tmp = list.get(i);
-									list.set(i, list.get(j));
-									list.set(j, tmp);
-									
-								}
-							}
-						}
-						
+						list.sort((Board o1, Board o2) -> o1.title.compareTo(o2.title));
 						showList(list);
 						break;
 					case 2:
-						
+						list.sort((Board o1, Board o2) -> o1.starScore > o2.starScore ? 1 : -1);  
+						showList(list);
 						break;
 					case 3:
-						
+						list.sort((Board o1, Board o2) -> o1.viewCount > o2.viewCount ? 1 : -1);
+						showList(list);
 						break;
 
 					case 0:
@@ -150,5 +136,7 @@ public class Quiz {
 		sc.close();
 		
 	}
+
+
 }
 
