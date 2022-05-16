@@ -36,6 +36,7 @@
 31. polymorphism
 32. collection 
 33. collection(Comparable / comparator)
-
+34. Thread
+35. input/output/File
 
 #### java공부 내용프로젝트 입니다.
